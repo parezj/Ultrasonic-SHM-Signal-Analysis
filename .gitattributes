@@ -2,9 +2,3 @@ lib/* linguist-vendored
 data/* linguist-vendored
 doc/* linguist-vendored
 bin/* linguist-vendored
-
-*.csv   linguist-language=C
-*.sh    linguist-language=C
-*.c     linguist-language=C
-*.h     linguist-language=C
-*.m     linguist-language=Matlab
