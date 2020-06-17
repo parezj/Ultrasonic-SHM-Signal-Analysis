@@ -1,7 +1,7 @@
 # Ultrasonic SHM UGW Signal Analysis - Composite Material Delamination Detection
 
 <div align="center" margin="0" padding="0">
-<img src="https://raw.githubusercontent.com/parezj/Ultrasonic-SHM-Signal-Analysis/master/doc/img_envelope.png" alt="MScope" width="400" height="400">
+<img src="https://raw.githubusercontent.com/parezj/Ultrasonic-SHM-Signal-Analysis/master/doc/img_envelope.png" alt="MScope" width="500" height="500">
 </div>
 
 1. [Introduction](#1-Introduction)
@@ -186,7 +186,7 @@ stored in columns, where the first line is the text name of the signal and the n
 represent the values of the y-axis. X-axis data is not needed, assuming samples
 were taken equidistantly over time.
 
-> Example of input data in CSV format
+> Example of input data in CSV format  
 | Dref | D1 | D2 | D3 | D4 | D5 |
 | ------ | ----- | ----- | ----- | ----- | ----- |
 | -45 | -51 | -61 | -68 | -43 | -61 |
@@ -287,7 +287,7 @@ does not depend on the number of interpolated points.
 > Interpolation by PLI method. Orange indicates the connection of local maxima,
 yellow connection of local minima.
 
-> Comparison of library speed using different methods
+> Comparison of library speed using different methods  
 | *ni* | *mean* (µs) | PLI (µs) | CSI (µs) | ECI (µs) | PLI (coef.) | CSI (coef.) | ECI (coef.) |
 | ------ | ------------- | ---------- | ---------- | ------ ---- | ------------- | ------------- | ------------- |
 | 100 | 12.6 | 36.5 | 63.3 | 214.9 | 2.89 | 5.04 | 17.10 |
