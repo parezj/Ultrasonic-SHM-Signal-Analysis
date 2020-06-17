@@ -117,16 +117,14 @@ universal. It always depends on the situation. Most often you can meet with cons
 linear, cubic or *sinc* interpolation. In our case, it seems appropriate
 linear and cubic. We will also use experimental ECI interpolation for comparison.
 
-PLI - Piecewise Linear Interpolation
-------------------------------------
+### PLI - Piecewise Linear Interpolation
 
 Linear interpolation is the simplest and fastest after constant interpolation.
 To determine the equation of a line between two points, it is enough to know the coordinates of the endpoints.
 In our case, we don't even have to know it, because we're looking for a global maximum, and that's it
 certainly located in an already known point.
 
-CSI - Cubic Spline Interpolation
---------------------------------
+### CSI - Cubic Spline Interpolation
 
 Cubic interpolation is the connection of points to 3rd degree polynomials that together form
 continuous function with continuous first and second derivatives. We distinguish
@@ -138,8 +136,7 @@ interpolated points. More point means longer calculation, larger resulting data
 file, but also a more faithful signal reconstruction. Fewer points is faster, however
 the signal may be jagged. Therefore, it is important to choose the right compromise.
 
-ECI - Extremum Center Interpolation
------------------------------------
+### ECI - Extremum Center Interpolation
 
 This interpolation method is mainly used to find the IMF components of the signal,
 however, it may be interesting to test it to evaluate the shift. Alternately
@@ -187,6 +184,7 @@ represent the values of the y-axis. X-axis data is not needed, assuming samples
 were taken equidistantly over time.
 
 > Example of input data in CSV format  
+
 | Dref | D1 | D2 | D3 | D4 | D5 |
 | ------ | ----- | ----- | ----- | ----- | ----- |
 | -45 | -51 | -61 | -68 | -43 | -61 |
@@ -288,6 +286,7 @@ does not depend on the number of interpolated points.
 yellow connection of local minima.
 
 > Comparison of library speed using different methods  
+
 | *ni* | *mean* (µs) | PLI (µs) | CSI (µs) | ECI (µs) | PLI (coef.) | CSI (coef.) | ECI (coef.) |
 | ------ | ------------- | ---------- | ---------- | ------ ---- | ------------- | ------------- | ------------- |
 | 100 | 12.6 | 36.5 | 63.3 | 214.9 | 2.89 | 5.04 | 17.10 |
