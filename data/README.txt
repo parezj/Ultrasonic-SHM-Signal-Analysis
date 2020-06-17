@@ -1,0 +1,1 @@
+ni = number of interpolated points

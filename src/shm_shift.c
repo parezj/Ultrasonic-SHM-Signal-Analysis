@@ -26,8 +26,8 @@ static int is_space(unsigned char c);
 static int is_term(unsigned char c);
 
 static void local_max_min(int* array, int len, int* max_idx, int* min_idx, int* max_cnt, int* min_cnt);
-static void pli(struct signal* sig);
-static void csi(struct signal* sig, int ni, float* y_override);
+static void pli(struct signal* sig, int interp_min);
+static void csi(struct signal* sig, int ni, float* y_override, int interp_min);
 static void eci(struct signal* sig, int ni);
 static void cubic_spline(int n, int* x, float* a, float* b, float* c, float* d);
 static void eci_get_points_cntr(int idx, int loc_cnt, int* loc, int* di, int* p1x, int* p2x, int* p1y, int* p2y);
@@ -49,6 +49,7 @@ shm_shift_t* shm_shift__create()
         fprintf(stderr, "Failed to initialize csv parser\n");
         exit(EXIT_FAILURE);
     }
+    self->interp_min = 0;
 
     return self;
 }
@@ -132,11 +133,11 @@ int shm_shift__analyse_csv(shm_shift_t* self, enum interp_alg alg, int ref_col, 
     self->alg = alg;
     self->interp_n = interp_n;
 
-    int maxmin_sz = (self->rows / 2);
+    /* int maxmin_sz = (self->rows / 2); */
 
     for (int i = 0; i < self->cols; i++)
     {
-        shm_shift__analyse_signal(self->signals + i, alg, interp_n);
+        shm_shift__analyse_signal(self->signals + i, alg, interp_n, self->interp_min);
 
         /** finally subtract global max from ref signal */
         if (i == ref_col)
@@ -148,7 +149,7 @@ int shm_shift__analyse_csv(shm_shift_t* self, enum interp_alg alg, int ref_col, 
     return 0;
 }
 
-int shm_shift__analyse_signal(struct signal* sig, enum interp_alg alg, int interp_n)
+int shm_shift__analyse_signal(struct signal* sig, enum interp_alg alg, int interp_n, int interp_min)
 {
     if (!sig)
         return -3;
@@ -176,10 +177,10 @@ int shm_shift__analyse_signal(struct signal* sig, enum interp_alg alg, int inter
     switch (alg)
     {
         case PLI:
-            pli(sig);
+            pli(sig, interp_min);
             break;
         case CSI:
-            csi(sig, interp_n, NULL);
+            csi(sig, interp_n, NULL, interp_min);
             break;
         case ECI:
             eci(sig, interp_n);
@@ -192,6 +193,7 @@ int shm_shift__analyse_signal(struct signal* sig, enum interp_alg alg, int inter
 
     printf("dataset %u: %.1f shift x from global max of ref\n\n", i, sig->shift_x_max);
 #endif
+    return 0;
 }
 
 int shm_shift__write_csv(shm_shift_t* self, char* csv_path, char delim)
@@ -223,7 +225,10 @@ int shm_shift__write_csv(shm_shift_t* self, char* csv_path, char delim)
     sprintf(path_lmax, "%s_local_max.csv", csv_path);
     sprintf(path_lmin, "%s_local_min.csv", csv_path);
     sprintf(path_lcntr, "%s_local_ext_centers.csv", csv_path);
-    sprintf(path_interp, "%s_interpolated_%s.csv", csv_path, algstr);
+    if (self->interp_min)
+        sprintf(path_interp, "%s_interpolated_min_%s.csv", csv_path, algstr);
+    else
+        sprintf(path_interp, "%s_interpolated_%s.csv", csv_path, algstr);
     sprintf(path_results, "%s_results_%s.csv", csv_path, algstr);
 
     f_lmax = fopen(path_lmax,"w");
@@ -428,18 +433,27 @@ static int is_term(unsigned char c)
 }
 
 /** Piecewise Linear Interpolation */
-static void pli(struct signal* sig)
+static void pli(struct signal* sig, int interp_min)
 {
     float max_val = INT_MIN;
     float min_val = INT_MAX;
 
-    sig->ip_cnt = sig->loc_max_idx_cnt;
+    int* loc_idx = sig->loc_max_idx;
+    int loc_idx_cnt = sig->loc_max_idx_cnt;
+
+    if (interp_min)
+    {
+        loc_idx = sig->loc_min_idx;
+        loc_idx_cnt = sig->loc_min_idx_cnt;
+    }
+
+    sig->ip_cnt = loc_idx_cnt;
     sig->interp = (struct pt*)malloc(sig->ip_cnt * sizeof(struct pt));
 
     for (int i = 0; i < sig->ip_cnt; i++)
     {
-        float x = (float)sig->loc_max_idx[i];
-        float y = (float)sig->data[sig->loc_max_idx[i]];
+        float x = (float)loc_idx[i];
+        float y = (float)sig->data[loc_idx[i]];
 
         struct pt p = { x , y };
         sig->interp[i] = p;
@@ -458,45 +472,54 @@ static void pli(struct signal* sig)
 }
 
 /** Cubic Spline Interpolation */
-static void csi(struct signal* sig, int ni, float* y_override)
+static void csi(struct signal* sig, int ni, float* y_override, int interp_min)
 {
     float max_val = INT_MIN;
     float min_val = INT_MAX;
 
     assert(sig->loc_max_idx_cnt > 1);
 
-    float* y = malloc(sig->loc_max_idx_cnt * sizeof(float));
-    float* b = malloc(sig->loc_max_idx_cnt * sizeof(float));
-    float* c = malloc(sig->loc_max_idx_cnt * sizeof(float));
-    float* d = malloc(sig->loc_max_idx_cnt * sizeof(float));
+    int* loc_idx = sig->loc_max_idx;
+    int loc_idx_cnt = sig->loc_max_idx_cnt;
 
-    y[0] = (float)(y_override != NULL ? y_override[0] : sig->data[sig->loc_max_idx[0]]);
-    int diff_x_cnt = 0;
-
-    for (int i = 1; i < sig->loc_max_idx_cnt; i++)
+    if (interp_min)
     {
-        diff_x_cnt += sig->loc_max_idx[i] - sig->loc_max_idx[i - 1];
-        y[i] = (float)(y_override != NULL ? y_override[i] : sig->data[sig->loc_max_idx[i]]);
+        loc_idx = sig->loc_min_idx;
+        loc_idx_cnt = sig->loc_min_idx_cnt;
     }
 
-    diff_x_cnt++;
-    assert(diff_x_cnt > 0);
+    float* y = malloc(loc_idx_cnt * sizeof(float));
+    float* b = malloc(loc_idx_cnt * sizeof(float));
+    float* c = malloc(loc_idx_cnt * sizeof(float));
+    float* d = malloc(loc_idx_cnt * sizeof(float));
 
-    sig->ip_cnt = diff_x_cnt * ni;
+    y[0] = (float)(y_override != NULL ? y_override[0] : sig->data[loc_idx[0]]);
+
+    if (interp_min)
+        y[0] = (float)sig->data[loc_idx[0]];
+
+    for (int i = 1; i < loc_idx_cnt; i++)
+        y[i] = (float)(y_override != NULL ? y_override[i] : sig->data[loc_idx[i]]);
+
+    sig->ip_cnt =  ((1 + ni) * loc_idx_cnt) - ni; // ni * diff_x_cnt
     sig->interp = (struct pt*)malloc(sig->ip_cnt * sizeof(struct pt));
 
-    cubic_spline(sig->loc_max_idx_cnt, sig->loc_max_idx, y, b, c, d);
+    cubic_spline(loc_idx_cnt, loc_idx, y, b, c, d);
 
-    for (int i = 1, k = 0, q = 0; i < sig->loc_max_idx_cnt; i++, k++)
+    for (int i = 1, k = 0, q = 0; i < loc_idx_cnt + 1; i++, k++)
     {
-        int block = (sig->loc_max_idx[i] - sig->loc_max_idx[i - 1]);
-        if (i == sig->loc_max_idx_cnt - 1)
-            block++;
+        int block = 0;
+        if (i < loc_idx_cnt)
+            block = (loc_idx[i] - loc_idx[i - 1]);
+        else
+            ni = 0;
 
-        for (int j = 0; j < block * ni; j++, q++)
+        float px2 = 0;
+        float dt = (float)block / (float)(ni + 1);
+        for (int m = 0; m < ni + 1; q++, m++)
         {
-            float px2 = ((float)j / (float)ni);
-            float px = (float)sig->loc_max_idx[i - 1] + ((float)j / (float)ni);
+            px2 += dt;
+            float px = (float)loc_idx[i - 1] + px2;
             float py = (d[k] * px2*px2*px2) + (c[k] * px2*px2) + (b[k] * px2) + y[k];
 
             struct pt p = { px , py };
@@ -566,7 +589,7 @@ static void eci(struct signal* sig, int ni)
     sig->loc_max_idx = mid_x;
     sig->loc_max_idx_cnt = ext_cnt;
 
-    csi(sig, ni, mid_y);
+    csi(sig, ni, mid_y, 0);
 
     sig->loc_max_idx = tmp_lmax;
     sig->loc_max_idx_cnt = tmp_lmax_cnt;

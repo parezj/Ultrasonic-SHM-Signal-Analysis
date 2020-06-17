@@ -55,6 +55,8 @@ typedef struct shm_shift        /** library main object */
     struct signal* signals;     /** signals array */
     struct csv_parser parser;   /** csv parser */
 
+    int interp_min;             /** optional cfg for prefering loc min rather then max */
+
     /** private: */
     int second_pass;
     long unsigned rows;
@@ -70,8 +72,9 @@ shm_shift_t* shm_shift__create();
 
 int shm_shift__read_csv(shm_shift_t* self, char* csv_path, char delim);
 int shm_shift__analyse_csv(shm_shift_t* self, enum interp_alg alg, int ref_col, int interp_n);
-int shm_shift__analyse_signal(struct signal* sig, enum interp_alg alg, int interp_n);
 int shm_shift__write_csv(shm_shift_t* self, char* csv_path, char delim);
+
+int shm_shift__analyse_signal(struct signal* sig, enum interp_alg alg, int interp_n, int interp_min);
 
 void shm_shift__dispose_calc(shm_shift_t* self);
 void shm_shift__dispose_all(shm_shift_t* self);
