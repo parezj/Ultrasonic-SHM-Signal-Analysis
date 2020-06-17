@@ -185,7 +185,7 @@ were taken equidistantly over time.
 
 > Example of input data in CSV format  
 
-<table border="1" cellspacing="0" cellpadding="0">
+<table border="1" cellspacing="0" cellpadding="0" align="left">
 <tbody>
 <tr>
 <td width="56">
