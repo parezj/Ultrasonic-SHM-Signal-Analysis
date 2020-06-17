@@ -185,8 +185,7 @@ were taken equidistantly over time.
 
 > Example of input data in CSV format  
 
-<p align="left">
-<table border="1" cellspacing="0" cellpadding="0" align="left">
+<table>
 <tbody>
 <tr>
 <td width="56">
@@ -270,7 +269,6 @@ were taken equidistantly over time.
 </tr>
 </tbody>
 </table>
-</p>
 
 > Example of using a library
 ```c
@@ -368,7 +366,7 @@ yellow connection of local minima.
 
 > Comparison of library speed using different methods  
 
-<table border="1" cellspacing="0" cellpadding="0">
+<table>
 <tbody>
 <tr>
 <td width="30">
