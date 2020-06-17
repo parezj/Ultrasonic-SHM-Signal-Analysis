@@ -185,6 +185,7 @@ were taken equidistantly over time.
 
 > Example of input data in CSV format  
 
+<p align="left">
 <table border="1" cellspacing="0" cellpadding="0" align="left">
 <tbody>
 <tr>
@@ -269,6 +270,7 @@ were taken equidistantly over time.
 </tr>
 </tbody>
 </table>
+</p>
 
 > Example of using a library
 ```c
