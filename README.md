@@ -388,15 +388,15 @@ yellow connection of local minima.
 </td>
 <td width="45">
 <p>PLI</p>
-<p>(koef.)</p>
+<p>(coef.)</p>
 </td>
 <td width="45">
 <p>CSI</p>
-<p>(koef.)</p>
+<p>(coef.)</p>
 </td>
 <td width="45">
 <p>ECI</p>
-<p>(koef.)</p>
+<p>(coef.)</p>
 </td>
 </tr>
 <tr>
