@@ -185,11 +185,134 @@ were taken equidistantly over time.
 
 > Example of input data in CSV format  
 
-| Dref | D1 | D2 | D3 | D4 | D5 |
-| ------ | ----- | ----- | ----- | ----- | ----- |
-| -45 | -51 | -61 | -68 | -43 | -61 |
-| -43 | -50 | -59 | -66 | -42 | -59 |
-| -42 | -49 | -57 | -65 | -40 | -57 |
+<table style="border-collapse:collapse;border:none;mso-border-top-alt:double windowtext 1.5pt;
+ mso-border-bottom-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:none" cellspacing="0" cellpadding="0" border="1">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="width:41.9pt;border-top:double windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:double windowtext 1.5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span class="SpellE"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:
+  CS">D<sub>ref</sub></span></span><span style="font-size:8.0pt;line-height:
+  105%;mso-ansi-language:CS"><o:p></o:p></span></p>
+  </td>
+  <td style="width:41.9pt;border-top:double windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:double windowtext 1.5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">D<sub>1</sub><o:p></o:p></span></p>
+  </td>
+  <td style="width:41.9pt;border-top:double windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:double windowtext 1.5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">D<sub>2</sub><o:p></o:p></span></p>
+  </td>
+  <td style="width:41.9pt;border-top:double windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:double windowtext 1.5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">D<sub>3</sub><o:p></o:p></span></p>
+  </td>
+  <td style="width:41.95pt;border-top:double windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:double windowtext 1.5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">D<sub>4</sub><o:p></o:p></span></p>
+  </td>
+  <td style="width:41.95pt;border-top:double windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:double windowtext 1.5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">D<sub>5</sub><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="width:41.9pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒45<o:p></o:p></span></p>
+  </td>
+  <td style="width:41.9pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒51<o:p></o:p></span></p>
+  </td>
+  <td style="width:41.9pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒61<o:p></o:p></span></p>
+  </td>
+  <td style="width:41.9pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒68<o:p></o:p></span></p>
+  </td>
+  <td style="width:41.95pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒43<o:p></o:p></span></p>
+  </td>
+  <td style="width:41.95pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒61<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2;height:7.5pt">
+  <td style="width:41.9pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒43<o:p></o:p></span></p>
+  </td>
+  <td style="width:41.9pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒50<o:p></o:p></span></p>
+  </td>
+  <td style="width:41.9pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒59<o:p></o:p></span></p>
+  </td>
+  <td style="width:41.9pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒66<o:p></o:p></span></p>
+  </td>
+  <td style="width:41.95pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒42<o:p></o:p></span></p>
+  </td>
+  <td style="width:41.95pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒59<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes;height:7.5pt">
+  <td style="width:41.9pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒42<o:p></o:p></span></p>
+  </td>
+  <td style="width:41.9pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒49<o:p></o:p></span></p>
+  </td>
+  <td style="width:41.9pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒57<o:p></o:p></span></p>
+  </td>
+  <td style="width:41.9pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒65<o:p></o:p></span></p>
+  </td>
+  <td style="width:41.95pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒40<o:p></o:p></span></p>
+  </td>
+  <td style="width:41.95pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="56" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">‒57<o:p></o:p></span></p>
+  </td>
+ </tr>
+</tbody></table>
 
 > Example of using a library
 ```c
@@ -287,12 +410,224 @@ yellow connection of local minima.
 
 > Comparison of library speed using different methods  
 
-| *ni* | *mean* (µs) | PLI (µs) | CSI (µs) | ECI (µs) | PLI (coef.) | CSI (coef.) | ECI (coef.) |
-| ------ | ------------- | ---------- | ---------- | ------ ---- | ------------- | ------------- | ------------- |
-| 100 | 12.6 | 36.5 | 63.3 | 214.9 | 2.89 | 5.04 | 17.10 |
-| 10 | 12.5 | 36.2 | 46.9 | 60.9 | 2.90 | 3.75 | 4.87 |
-| 3 | 12.7 | 36.9 | 44.4 | 54.3 | 2.89 | 3.49 | 4.27 |
-| 1 | 12.9 | 37.1 | 39.7 | 51.5 | 2.89 | 3.09 | 4.01 |
+<table style="border-collapse:collapse;border:none;mso-border-top-alt:double windowtext 1.5pt;
+ mso-border-bottom-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:none" cellspacing="0" cellpadding="0" border="1">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="width:22.8pt;border-top:double windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+  mso-border-top-alt:double windowtext 1.5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  mso-border-right-alt:dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="30" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><i><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">ni<o:p></o:p></span></i></p>
+  </td>
+  <td style="width:28.6pt;border-top:double windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+  mso-border-top-alt:double windowtext 1.5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  mso-border-right-alt:dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="38" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span class="SpellE"><i><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:
+  CS">mean</span></i></span><i><span style="font-size:8.0pt;line-height:105%;
+  mso-ansi-language:CS"><o:p></o:p></span></i></p>
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">(<span class="SpellE"><span class="e24kjd">μ</span>s</span>)<o:p></o:p></span></p>
+  </td>
+  <td style="width:37.0pt;border-top:double windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-left-alt:dash-small-gap windowtext .5pt;mso-border-top-alt:double windowtext 1.5pt;
+  mso-border-left-alt:dash-small-gap windowtext .5pt;mso-border-bottom-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="49" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">PLI <o:p></o:p></span></p>
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">(<span class="SpellE"><span class="e24kjd">μ</span>s</span>)<o:p></o:p></span></p>
+  </td>
+  <td style="width:30.95pt;border-top:double windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:double windowtext 1.5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="41" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">CSI (<span class="SpellE"><span class="e24kjd">μ</span>s</span>)<o:p></o:p></span></p>
+  </td>
+  <td style="width:31.5pt;border-top:double windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:dashed windowtext 1.0pt;
+  mso-border-top-alt:double windowtext 1.5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  mso-border-right-alt:dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="42" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">ECI (<span class="SpellE"><span class="e24kjd">μ</span>s</span>)<o:p></o:p></span></p>
+  </td>
+  <td style="width:33.55pt;border-top:double windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-left-alt:dash-small-gap windowtext .5pt;mso-border-top-alt:double windowtext 1.5pt;
+  mso-border-left-alt:dash-small-gap windowtext .5pt;mso-border-bottom-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="45" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">PLI<o:p></o:p></span></p>
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">(<span class="SpellE">koef</span>.)<o:p></o:p></span></p>
+  </td>
+  <td style="width:33.8pt;border-top:double windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:double windowtext 1.5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="45" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">CSI<o:p></o:p></span></p>
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">(<span class="SpellE">koef</span>.)<o:p></o:p></span></p>
+  </td>
+  <td style="width:33.8pt;border-top:double windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:double windowtext 1.5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="45" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">ECI<o:p></o:p></span></p>
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">(<span class="SpellE">koef</span>.)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="width:22.8pt;border:none;border-right:dashed windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-right-alt:dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="30" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">100<o:p></o:p></span></p>
+  </td>
+  <td style="width:28.6pt;border:none;border-right:dashed windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-right-alt:dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="38" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">12.6<o:p></o:p></span></p>
+  </td>
+  <td style="width:37.0pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:dash-small-gap windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="49" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">36.5<o:p></o:p></span></p>
+  </td>
+  <td style="width:30.95pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="41" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">63.3<o:p></o:p></span></p>
+  </td>
+  <td style="width:31.5pt;border:none;border-right:dashed windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-right-alt:dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="42" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">214.9<o:p></o:p></span></p>
+  </td>
+  <td style="width:33.55pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:dash-small-gap windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="45" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">2.89<o:p></o:p></span></p>
+  </td>
+  <td style="width:33.8pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="45" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">5.04<o:p></o:p></span></p>
+  </td>
+  <td style="width:33.8pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="45" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">17.10<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2;height:7.5pt">
+  <td style="width:22.8pt;border:none;border-right:dashed windowtext 1.0pt;
+  mso-border-right-alt:dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="30" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">10<o:p></o:p></span></p>
+  </td>
+  <td style="width:28.6pt;border:none;border-right:dashed windowtext 1.0pt;
+  mso-border-right-alt:dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="38" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">12.5<o:p></o:p></span></p>
+  </td>
+  <td style="width:37.0pt;border:none;mso-border-left-alt:
+  dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.5pt" width="49" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">36.2<o:p></o:p></span></p>
+  </td>
+  <td style="width:30.95pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="41" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">46.9<o:p></o:p></span></p>
+  </td>
+  <td style="width:31.5pt;border:none;border-right:dashed windowtext 1.0pt;
+  mso-border-right-alt:dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="42" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">60.9<o:p></o:p></span></p>
+  </td>
+  <td style="width:33.55pt;border:none;mso-border-left-alt:
+  dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.5pt" width="45" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">2.90<o:p></o:p></span></p>
+  </td>
+  <td style="width:33.8pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="45" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">3.75<o:p></o:p></span></p>
+  </td>
+  <td style="width:33.8pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="45" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">4.87<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;height:7.5pt">
+  <td style="width:22.8pt;border:none;border-right:dashed windowtext 1.0pt;
+  mso-border-right-alt:dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="30" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">3<o:p></o:p></span></p>
+  </td>
+  <td style="width:28.6pt;border:none;border-right:dashed windowtext 1.0pt;
+  mso-border-right-alt:dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="38" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">12.7<o:p></o:p></span></p>
+  </td>
+  <td style="width:37.0pt;border:none;mso-border-left-alt:
+  dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.5pt" width="49" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">36.9<o:p></o:p></span></p>
+  </td>
+  <td style="width:30.95pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="41" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">44.4<o:p></o:p></span></p>
+  </td>
+  <td style="width:31.5pt;border:none;border-right:dashed windowtext 1.0pt;
+  mso-border-right-alt:dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="42" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">54.3<o:p></o:p></span></p>
+  </td>
+  <td style="width:33.55pt;border:none;mso-border-left-alt:
+  dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:7.5pt" width="45" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">2.89<o:p></o:p></span></p>
+  </td>
+  <td style="width:33.8pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="45" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">3.49<o:p></o:p></span></p>
+  </td>
+  <td style="width:33.8pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="45" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">4.27<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:4;mso-yfti-lastrow:yes;height:7.5pt">
+  <td style="width:22.8pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:dashed windowtext 1.0pt;
+  mso-border-bottom-alt:double windowtext 1.5pt;mso-border-right-alt:dash-small-gap windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.5pt" width="30" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">1<o:p></o:p></span></p>
+  </td>
+  <td style="width:28.6pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:dashed windowtext 1.0pt;
+  mso-border-bottom-alt:double windowtext 1.5pt;mso-border-right-alt:dash-small-gap windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.5pt" width="38" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">12.9<o:p></o:p></span></p>
+  </td>
+  <td style="width:37.0pt;border:none;border-bottom:double windowtext 1.5pt;
+  mso-border-left-alt:dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="49" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">37.1<o:p></o:p></span></p>
+  </td>
+  <td style="width:30.95pt;border:none;border-bottom:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.5pt" width="41" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">39.7<o:p></o:p></span></p>
+  </td>
+  <td style="width:31.5pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:dashed windowtext 1.0pt;
+  mso-border-bottom-alt:double windowtext 1.5pt;mso-border-right-alt:dash-small-gap windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.5pt" width="42" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">51.5<o:p></o:p></span></p>
+  </td>
+  <td style="width:33.55pt;border:none;border-bottom:double windowtext 1.5pt;
+  mso-border-left-alt:dash-small-gap windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:7.5pt" width="45" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">2.89<o:p></o:p></span></p>
+  </td>
+  <td style="width:33.8pt;border:none;border-bottom:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.5pt" width="45" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">3.09<o:p></o:p></span></p>
+  </td>
+  <td style="width:33.8pt;border:none;border-bottom:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:7.5pt" width="45" valign="top">
+  <p class="Text" style="text-align:center;text-indent:0cm" align="center"><span style="font-size:8.0pt;line-height:105%;mso-ansi-language:CS">4.01<o:p></o:p></span></p>
+  </td>
+ </tr>
+</tbody></table>
 
 The stated values apply to a signal with 10300 samples. This is the average of 100 measurements.
 The column *ni* indicates the number of interpolated points and does not make sense for the PLI method.
